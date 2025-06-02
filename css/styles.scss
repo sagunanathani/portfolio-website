@@ -1,0 +1,525 @@
+/*
+Colors used
+Text Color (Dark Gray): #2b2b2b;
+Primary Color (Purple): #357b70;
+Secondary Color (Orange): #e0b354;
+ */
+
+:root {
+  --primary-color: #357b70;
+  --secondary-color: #e0b354;
+  --dark-grey: #2b2b2b;
+  // SCSS Variables
+  $text-color: #333;
+  $hover-color: #007bff;
+  $visited-color: darkblue;
+  $active-color: #791967;
+  $primary-bg: lightsteelblue;
+  $grid-gap: 20px;
+  $hover-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  $font-family: "Raleway", sans-serif;
+  $link-color: #fff;
+  $link-font-size: 20px;
+  $link-padding: 10px 10px;
+  $border-color: #ddd;
+  $header-bg: #333;
+  $header-text: #fff;
+  $row-alt-bg: #f9f9f9;
+  $cell-padding: 5px;
+  $background-color: #fff;
+  $primary-light: lighten($primary-color, 20%);
+  $primary-dark: darken($primary-color, 15%);
+}
+
+a {
+  color: var(--primary-color);
+}
+
+/*  universal * selector (which will apply the styling to all HTML elements) within your CSS file */
+/* sizing- ✅ Keeps layouts consistent ✅ Prevents unwanted overflow ✅ Improves responsive designs */
+
+/* define them in the :root pseudo-class - pseudo class targets all elements within the <html> tag */
+
+* {
+  color: $text-color;
+  box-sizing: border-box;
+}
+
+.body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 1.6;
+}
+
+h1 {
+  font-size: 30px;
+  font-weight: bold;
+  /*   font-style: italic; */
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: 700;
+  font-variant: small-caps;
+  margin: auto;
+}
+
+h3 {
+  font-size: 18px;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+a {
+  color: #0c7263;
+  text-decoration: none;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+  &:hover,
+  &:focus {
+    /* No underlining when hovering over a link */
+    text-decoration: none;
+    cursor: pointer;
+    color: $hover-color;
+    text-shadow: 0px 2px 8px rgba(0, 123, 255, 0.3);
+  }
+  &:visited {
+    /* visited link */
+    color: $visited-color;
+  }
+  &:focus {
+    background-color: chocolate;
+  }
+  &:active {
+    /* selected link */
+    color: $active-color;
+  }
+}
+
+.button {
+  color: black;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 18px;
+  background-color: darkgrey;
+}
+
+.button_primary {
+  background-color: $primary-dark;
+  color: #021829;
+  font-size: 18px;
+  font-family: inherit;
+  padding: 5px;
+  border-radius: 3px;
+  &:hover {
+    color: $hover-color;
+  }
+  &:visited {
+    color: $visited-color;
+  }
+  &:focus {
+    background-color: bisque;
+  }
+  &:active {
+    color: $active-color;
+  }
+  &:hover,
+  &:focus {
+    /* lets the mouse appear as a hand when hovering over the button */
+    cursor: pointer;
+    /* reduces the opacity of the button to 80% */
+    opacity: 0.8;
+  }
+}
+
+/* input, texture, select, button {
+  font-family: system-ui;
+} */
+
+.button_secondary {
+  background-color: #e0b354;
+  color: #2b2b2b;
+  font-size: 18px;
+  font-family: inherit;
+  padding: 5px;
+  border-radius: 3px;
+  cursor: pointer;
+  &:hover {
+    color: $hover-color;
+  }
+}
+
+.navigation-list__item--active {
+  text-decoration: none;
+}
+
+/* span {
+  display: block;
+} */
+
+/* nav {
+  position: relative;
+  top: 20px;
+  left: 20px;
+} */
+
+.logo img {
+  width: 57px;
+  height: auto;
+  animation: float 3s ease-in-out infinite, scaleUp 4s ease-in-out infinite;
+  transform-origin: center;
+  &:hover {
+    animation: rotate 1s ease-in-out;
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes scaleUp {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg) scale(1.05);
+  }
+  to {
+    transform: rotate(360deg) scale(1.05);
+  }
+}
+
+.profile__portrait {
+  float: left;
+  width: 250px;
+  height: auto;
+  margin-right: 40px;
+  border-radius: 50%;
+}
+
+/* This will clear all floats, both right and left */
+.page-footer {
+  clear: both;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.profile {
+  max-width: 700px;
+  margin: 100px auto;
+  padding: 15px;
+}
+
+.page-header {
+  display: flex;
+  width: 100%;
+  padding: 20px;
+  background: #009688;
+  margin: auto;
+  border-bottom: 1px solid deepskyblue;
+}
+
+.page-header__item {
+  flex: 0 1 200px;
+}
+
+.page-header__item:last-child {
+  flex-grow: 1;
+  text-align: right;
+}
+
+.navigation-list {
+  list-style-type: none;
+}
+
+.navigation-list li {
+  display: inline-block;
+  margin-left: 15px;
+}
+
+%grid-item-shared {
+  background-color: $primary-bg;
+  padding: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.grid-project-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: $grid-gap;
+
+  .grid__item {
+   @extend %grid-item-shared;
+
+    &:hover {
+      transform: scale(1.05);
+      box-shadow: $hover-shadow;
+      cursor: pointer;
+    }
+
+    &:last-child {
+      grid-column-start: 3;
+      grid-column-end: 3;
+      grid-row-start: 1;
+      grid-row-end: 3;
+    }
+  }
+}
+
+/*  short-form with grid-column and grid-row */
+/* .grid__item:last-child {
+  grid-column: 3 / 3;
+  grid-row: 1 / 3;
+} */
+
+/* media queries for responsive web page */
+@media all and (max-width: 500px) {
+  .grid-project-list {
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+  }
+  .grid__item:last-child {
+    grid-column: auto / auto;
+    grid-row: auto / auto;
+  }
+  h1 {
+    font-size: 22px;
+  }
+}
+
+@media all and (min-width: 500px) and (max-width: 750px) {
+  .grid-project-list {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+  }
+  .grid__item:last-child {
+    grid-column: auto / auto;
+    grid-row: auto / auto;
+  }
+  h1 {
+    font-size: 22px;
+  }
+}
+
+@media all and (max-width: 750px) {
+  .grid {
+    grid-gap: 10px;
+  }
+  .grid__item:last-child {
+    grid-column: auto / auto;
+    grid-row: auto / auto;
+  }
+  h1 {
+    font-size: 22px;
+  }
+}
+
+main {
+  margin: 5px;
+}
+
+.text {
+  text-align: center;
+}
+
+.text ul {
+  list-style-type: none;
+}
+
+.contact-form {
+  text-align: center;
+}
+h1 {
+  text-align: center;
+}
+
+.skill_table {
+  display: flex;
+  justify-content: center;
+
+  table {
+    border-collapse: collapse;
+
+    th,
+    td {
+      border: 1px solid $border-color;
+      padding: $cell-padding;
+    }
+
+    th {
+      background-color: $header-bg;
+      color: $header-text;
+    }
+
+    tbody {
+      tr:nth-child(odd) {
+        background-color: $row-alt-bg;
+      }
+    }
+  }
+}
+
+.buttoncv {
+  /* overwrites browser defaults and resets the border */
+  border: none;
+  display: inline-block;
+  /* takes the font from the outer container */
+  font-family: inherit;
+  /* styles the button */
+  background-color: #357b70;
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 3px;
+  /* width of the border, type, color */
+  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+  /* transition longer
+  transition-duration: 0.9s;
+  transition-property: opacity; */
+  /* transition shorter: transition: [transition-property] [transition-duration] [transition-timing-function] [transition-delay]; */
+  transition: opacity 0.2s;
+  &:hover,
+  &:focus {
+    /* lets the mouse appear as a hand when hovering over the button */
+    cursor: pointer;
+    /* reduces the opacity of the button to 80% */
+    opacity: 0.8;
+    color: $hover-color;
+    background-color: #489c79;
+    font-size: 15px;
+    transform: scale(1.05); /* Slight enlargement */
+  }
+}
+
+@keyframes color-change-cloud {
+  from {
+    fill: #fbfdfc;
+  }
+  to {
+    fill: skyblue;
+  }
+}
+
+@keyframes color-change-sun {
+  0% {
+    fill: #edc655;
+  }
+  50% {
+    fill: #fcffad;
+  }
+  100% {
+    fill: #f76414;
+  }
+}
+
+/* long */
+/* .sun {
+  animation-duration: 4s;
+  animation-name: color-change;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+}
+ */
+
+/* short */
+.sun {
+  animation: 4s color-change-sun infinite alternate linear;
+}
+
+.cloud {
+  animation: 4s color-change-cloud infinite alternate linear;
+}
+
+@keyframes cloud-move {
+  from {
+    transform: translate(0, 50px);
+  }
+  to {
+    transform: translate(200px, 50px);
+  }
+}
+
+@keyframes cloud-move-reverse {
+  from {
+    transform: translate(446px, 48px);
+  }
+  to {
+    transform: translate(100px, 48px);
+  }
+}
+
+.cloud-front {
+  animation: 30s cloud-move infinite alternate linear;
+}
+
+.cloud-back {
+  animation: 34s cloud-move-reverse infinite alternate linear;
+}
+
+.container {
+  font-family: $font-family;
+  margin-left: auto;
+  padding: 12px;
+
+  a {
+    color: $link-color;
+    text-decoration: none;
+    font: $link-font-size $font-family;
+    margin: 0 10px;
+    padding: $link-padding;
+    position: relative;
+    z-index: 0;
+    cursor: pointer;
+  }
+}
+
+.borderYtoX {
+  a {
+    position: relative;
+
+    &::before,
+    &::after {
+      position: absolute;
+      opacity: 0.5;
+      height: 100%;
+      width: 2px;
+      content: "";
+      background: $background-color;
+      transition: all 0.3s;
+    }
+
+    &::before {
+      left: 0;
+      top: 0;
+    }
+
+    &::after {
+      right: 0;
+      bottom: 0;
+    }
+
+    &:hover {
+      &::before,
+      &::after {
+        opacity: 1;
+        height: 2px;
+        width: 100%;
+      }
+    }
+  }
+}
