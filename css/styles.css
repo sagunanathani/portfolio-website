@@ -14,7 +14,8 @@ Secondary Color (Orange): #e0b354;
   --active-color: #791967;
   --background-color:#fff;
   --font-family: "Raleway", sans-serif;
-  --primary-dark: darken(--primary-color, 15%);
+  /* ❌ This is SCSS, not CSS / --primary-dark: darken(--primary-color, 15%);*/ 
+  --primary-dark: #2c80b4;
 }
 
 a {
@@ -333,7 +334,41 @@ main{
 }
 
 .contact-form{
-    text-align: center;
+  text-align: center;
+  max-width: 600px;
+  margin: auto;
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.standard-label {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
 }
 h1{
     text-align: center;

@@ -12,8 +12,20 @@ Primary Color (Purple): #357b70;
 Secondary Color (Orange): #e0b354;
  */
 
+ :root {
+  --primary-color: #357b70;
+  --secondary-color: #e0b354;
+  --dark-grey: #2b2b2b;
+    --hover-color: #007bff;
+  --visited-color: darkblue;
+  --active-color: #791967;
+  --background-color:#fff;
+  --font-family: "Raleway", sans-serif;
+  --primary-dark: #2c80b4;
+}
+
 a {
-  color: #357b70;
+  color: var(--primary-color);
 }
 
 
@@ -65,22 +77,14 @@ a {
 
 a:visited {
   /* visited link */
-  color: darkblue;
+  color: var(--visited-color);
 }
 
-a:hover {
+a:hover, a:focus {
   /* No underlining when hovering over a link */
   text-decoration: none;
   cursor: pointer;
-  color: #007bff;
-  text-shadow: 0px 2px 8px rgba(0, 123, 255, 0.3);
-}
-
-a:focus {
-  /* No underlining when hovering over a link */
-  text-decoration: none;
-  cursor: pointer;
-  color: #007bff;
+  color: var(--hover-color);
   text-shadow: 0px 2px 8px rgba(0, 123, 255, 0.3);
 }
 
@@ -90,7 +94,7 @@ a:focus{
 
 a:active {
   /* selected link */
-  color: #791967;
+  color: var(--active-color);
 }
 
 .button{
@@ -101,7 +105,7 @@ a:active {
 }
 
 .button_primary{
-    background-color: #357b70;
+    background-color: var(--primary-color);
     color: #021829;
     font-size: 18px;
     font-family: inherit;
@@ -114,7 +118,7 @@ a:active {
 }
 
 .button_primary:hover{
-    color:#007bff;
+    color:var(--hover-color);
 }
 
 .button_primary:focus{
@@ -122,7 +126,7 @@ a:active {
 }
 
 .button_primary:active{
-    color: #791967;
+    color: var(--active-color);
 }
 
 .button_primary:hover, .button_primary:focus {
@@ -147,7 +151,7 @@ a:active {
 }
 
 .button_secondary:hover{
-    color: #007bff;
+    color: var(--hover-color);
 }
 
 .navigation-list__item--active {
@@ -346,7 +350,6 @@ a:active {
   grid-row: 1 / span 2;      /* start at row 1, span 2 rows */
 }
 
-
 /*  short-form with grid-column and grid-row */
 /* .grid__item:last-child {
   grid-column: 3 / 3;
@@ -410,7 +413,42 @@ main{
 }
 
 .contact-form{
-    text-align: center;
+  text-align: center;
+  max-width: 600px;
+  margin: auto;
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 12px;
+  -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.standard-label {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
 }
 h1{
     text-align: center;
@@ -466,25 +504,13 @@ h1{
   transition: opacity 0.2s;
 }
 
-.buttoncv:hover {
-  /* lets the mouse appear as a hand when hovering over the button */
-  cursor: pointer;
-  /* reduces the opacity of the button to 80% */
-  opacity: 0.8;
-  color: #007bff;
-  background-color: #489c79;
-  font-size: 15px;
-  -webkit-transform: scale(1.05);
-      -ms-transform: scale(1.05);
-          transform: scale(1.05); /* Slight enlargement */
-}
-
+.buttoncv:hover,
 .buttoncv:focus {
   /* lets the mouse appear as a hand when hovering over the button */
   cursor: pointer;
   /* reduces the opacity of the button to 80% */
   opacity: 0.8;
-  color: #007bff;
+  color: var(--hover-color);
   background-color: #489c79;
   font-size: 15px;
   -webkit-transform: scale(1.05);
@@ -612,7 +638,7 @@ h1{
 /* navigation page css with new style*/
 div.container
 {
-    font-family: "Raleway", sans-serif;
+    font-family: var(--font-family);
     margin-left: auto;
     padding: 12px;
 }
@@ -630,26 +656,14 @@ div.container a
 }
 
 /* Border from Y to X  */
-div.borderYtoX a:before
+div.borderYtoX a:before, div.borderYtoX a:after
 {
     position: absolute;
     opacity: 0.5;
     height: 100%;
     width: 2px;
     content: '';
-    background: #fff;
-    -webkit-transition: all 0.3s;
-    -o-transition: all 0.3s;
-    transition: all 0.3s;
-}
-div.borderYtoX a:after
-{
-    position: absolute;
-    opacity: 0.5;
-    height: 100%;
-    width: 2px;
-    content: '';
-    background: #fff;
+    background: var(--background-color);
     -webkit-transition: all 0.3s;
     -o-transition: all 0.3s;
     transition: all 0.3s;
@@ -673,6 +687,7 @@ div.borderYtoX a:hover:before, div.borderYtoX a:hover:after
     height: 2px;
     width: 100%;
 }
+
 
 
 
