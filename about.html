@@ -16,13 +16,7 @@
     />
 
     <!-- External style in folder but set a link with css file -->
-    <link rel="stylesheet" type="text/css" href="./css/style.production.css" />
-    <!-- Inline style with style tag -->
-    <!--     <style>
-      h2 {
-        background-color: lightgray;
-      }
-    </style> -->
+    <link rel="stylesheet" type="text/css" href="./css/styles.css" />
   </head>
 
   <body>
@@ -34,7 +28,6 @@
           alt="Saguna Nathani portfolio logo"
         />
       </div>
-      <!--<nav role="navigation" class="page-header__item"> -->
       <nav class="page-header__item">
         <div class="container borderYtoX">
           <a
@@ -45,6 +38,7 @@
           <a
             href="about.html"
             class="navigation-list__item navigation-list__item--active"
+            aria-label="About this website"
             >About</a
           >
           <a
@@ -65,16 +59,15 @@
       <h1>About me</h1>
       <div class="text">
         <p>
-          Welcome to my website! I'm a passionate **Full-Stack Developer**
-          dedicated to building efficient, scalable, and user-friendly
-          applications. <br />
-          With expertise in both **frontend &amp; backend**, I thrive on
-          crafting seamless digital experiences.
+          Welcome to my website! I'm a passionate
+          <strong> Full-Stack Developer </strong> dedicated to building
+          efficient, scalable, and user-friendly applications. <br />
+          With expertise in both <strong> frontend &amp; backend</strong>, I
+          thrive on crafting seamless digital experiences.
         </p>
         <p>
-          My goal is to **blend creativity with technology**, constantly
-          learning and improving to stay ahead in the ever-evolving tech
-          landscape.
+          My goal is to <b>combine creativity with technology</b>, constantly
+          learning and growing in the fast-moving world of web development.
         </p>
       </div>
 
@@ -126,23 +119,30 @@
             <td>Advanced</td>
           </tr>
           <tr>
-            <th scope="row">css</th>
+            <th scope="row">CSS</th>
             <td>3</td>
             <td>Intermediate</td>
           </tr>
           <tr>
             <th scope="row">JavaScript</th>
             <td>2</td>
+            <td>Intermediate</td>
+          </tr>
+          <tr>
+            <th scope="row">React</th>
+            <td>1.5</td>
             <td>Beginner</td>
           </tr>
         </tbody>
       </table>
     </div>
+    <div class="svg-wrapper">
     <svg
       id="about-picture"
       xmlns="http://www.w3.org/2000/svg"
       class="berlin-illustration"
       height="auto"
+      width="60%"
       viewBox="0 0 700 505"
       xmlns:xlink="http://www.w3.org/1999/xlink"
     >
@@ -2207,7 +2207,7 @@
         ></path>
       </g>
     </svg>
-    <!--<footer role="contentinfo" class="page-footer"></footer>  -->
+    </div>
     <footer class="page-footer">
       <div>
         <p>Find me on</p>

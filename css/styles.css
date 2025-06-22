@@ -9,7 +9,7 @@ Secondary Color (Orange): #e0b354;
   --primary-color: #357b70;
   --secondary-color: #e0b354;
   --dark-grey: #2b2b2b;
-    --hover-color: #007bff;
+    --hover-color: #0072ee;
   --visited-color: darkblue;
   --active-color: #791967;
   --background-color:#fff;
@@ -61,7 +61,7 @@ h3 {
 }
 
 a {
-  color: #0c7263;
+  color: #005d47;
   text-decoration: none;
   transition: color 0.3s ease, text-shadow 0.3s ease;
 }
@@ -223,7 +223,7 @@ a:active {
   display: flex;
   width: 100%;
   padding: 20px;
-  background: #009688;
+  background: #008579;
   margin: auto;
   border-bottom: 1px solid deepskyblue;
 }
@@ -360,7 +360,7 @@ main{
 button {
   padding: 10px 20px;
   border: none;
-  background-color: #007bff;
+  background-color: #0072ee;
   color: #fff;
   border-radius: 6px;
   font-size: 1rem;
@@ -547,6 +547,10 @@ div.borderYtoX a:hover:before, div.borderYtoX a:hover:after
     width: 100%;
 }
 
-
+.svg-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 
