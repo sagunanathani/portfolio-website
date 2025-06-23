@@ -553,4 +553,9 @@ div.borderYtoX a:hover:before, div.borderYtoX a:hover:after
   align-items: center;
 }
 
+.error-message {
+  color: red;
+  font-size: 0.9rem;
+  margin-top: 5px;
+}
 
