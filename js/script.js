@@ -77,6 +77,7 @@
     }
   });
 
+  //Show or clear error messages instantly
   nameInput.addEventListener("input", validateName);
   emailInput.addEventListener("input", validateEmail);
   messageInput.addEventListener("input", validateMessage);
