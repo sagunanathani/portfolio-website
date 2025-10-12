@@ -3,6 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Contact Saguna Nathani for web and mobile development projects. Reach out via email, phone, or contact form."
+    />
     <title>Contact Saguna Nathani</title>
     <link rel="icon" type="image/png" href="./img/AI.png" sizes="16x16" />
     <link
@@ -82,8 +86,8 @@
     </main>
 
     <div class="contact-form">
-      <form action="#" method="post" id="contact-form">
-        <label for="name">Name:</label>
+      <form action="#" method="post" id="contact-form" role="form">
+        <label for="name" aria-label="Your full name">Name:</label>
         <input
           type="text"
           class="standard-label"
@@ -92,7 +96,7 @@
           placeholder="Your name ..."
           required
         />
-        <label for="email">Email:</label>
+        <label for="email" aria-label="Your full email">Email:</label>
         <input
           type="email"
           class="standard-label"
@@ -101,13 +105,13 @@
           placeholder="Your Email ..."
           required
         />
-        <label for="message"> Message:</label>
+        <label for="message" aria-label="Your full message"> Message:</label>
         <textarea
           class="standard-label"
           name="message"
           id="message"
           placeholder="Your Message ..."
-          maxlength="30"
+          maxlength="500"
           minlength="20"
           required
         ></textarea>
@@ -120,13 +124,25 @@
         <p>Find me on</p>
         <div>
           <!-- img set with svg (set width,height,bg with text editor)-->
-          <a href="https://twitter.com/" target="_blank">
+          <a
+            href="https://twitter.com/"
+            target="_blank"
+            aria-label="Twitter profile"
+          >
             <img src="./img/twitter_icon.svg" alt="Twitter" />
           </a>
-          <a href="https://github.com/" target="_blank">
+          <a
+            href="https://github.com/"
+            target="_blank"
+            aria-label="Github profile"
+          >
             <img src="./img/github_icon.svg" alt="Github" />
           </a>
-          <a href="https://www.linkedin.com/" target="_blank">
+          <a
+            href="https://www.linkedin.com/"
+            target="_blank"
+            aria-label="Linkedin profile"
+          >
             <img src="./img/linkedin_icon.svg" alt="LinkedIn" />
           </a>
         </div>
