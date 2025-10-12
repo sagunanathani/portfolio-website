@@ -73,10 +73,12 @@
       console.log("Email:", emailInput.value);
       console.log("Message:", messageInput.value);
 
-      alert("Form submitted successfully!");
+      alert("Thank you! Your details have been submitted.");
+      // Clear all input fields
+      this.reset();
+      window.location.reload();
     }
   });
-
   //Show or clear error messages instantly
   nameInput.addEventListener("input", validateName);
   emailInput.addEventListener("input", validateEmail);

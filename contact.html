@@ -35,22 +35,26 @@
           <a
             href="index.html"
             class="navigation-list__item navigation-list__item--active"
+            rel="noopener noreferrer"
             >Home</a
           >
           <a
             href="about.html"
             class="navigation-list__item navigation-list__item--active"
             aria-label="About this website"
+            rel="noopener noreferrer"
             >About</a
           >
           <a
             href="work.html"
             class="navigation-list__item navigation-list__item--active"
+            rel="noopener noreferrer"
             >Work</a
           >
           <a
             href="contact.html"
             class="navigation-list__item navigation-list__item--active"
+            rel="noopener noreferrer"
             >Contact</a
           >
         </div>
@@ -66,27 +70,40 @@
           Germany
         </address>
         <p>Have a project in mind? Let’s work together!</p>
-        <p>
-          <!-- Telephone Link -  Browser automatically opens the user's default phone dialer -->
+        <!-- <p>
+          Telephone Link -  Browser automatically opens the user's default phone dialer 
           <a href="tel:+493048492016">Telephone: +49 178 57 44 122</a>
         </p>
 
         <p>
-          <!-- Email Link-  Browser automatically opens the user's default email program-->
+           Email Link-  Browser automatically opens the user's default email program
           <a href="mailto:sagunanathani@gmail.com"
             >Email: sagunanathani@gmail.com</a
           >
         </p>
 
         <p>
-          <!-- Clear Contact Call-to-Action -->
+          Clear Contact Call-to-Action 
           <a href="mailto:sagunanathani@gmail.com">Get in touch with me</a>
+        </p>
+ -->
+        <p>
+          <a href="https://x.com/SagunaNathani" target="_blank"
+            >Twitter: @SagunaNathani</a
+          >
+        </p>
+        <p>
+          <a
+            href="https://medium.com/@sagunanathani/build-a-real-time-chat-app-with-expo-firebase-and-gifted-chat-eaf2e2a4ed45"
+            target="_blank"
+            >Medium: @SagunaNathani</a
+          >
         </p>
       </div>
     </main>
 
     <div class="contact-form">
-      <form action="#" method="post" id="contact-form" role="form">
+      <form action="https://formspree.io/f/xrbyoelz" method="POST">
         <label for="name" aria-label="Your full name">Name:</label>
         <input
           type="text"
@@ -105,16 +122,18 @@
           placeholder="Your Email ..."
           required
         />
-        <label for="message" aria-label="Your full message"> Message:</label>
+
+        <label for="message" aria-label="Your full message"
+          >Your message:</label
+        >
         <textarea
-          class="standard-label"
           name="message"
+          class="standard-label"
           id="message"
           placeholder="Your Message ..."
-          maxlength="500"
-          minlength="20"
           required
         ></textarea>
+
         <button type="submit">Send</button>
       </form>
     </div>
@@ -125,29 +144,41 @@
         <div>
           <!-- img set with svg (set width,height,bg with text editor)-->
           <a
-            href="https://twitter.com/"
+            href="https://x.com/SagunaNathani"
             target="_blank"
             aria-label="Twitter profile"
+            rel="noopener noreferrer"
           >
             <img src="./img/twitter_icon.svg" alt="Twitter" />
           </a>
           <a
-            href="https://github.com/"
+            href="https://github.com/sagunanathani"
             target="_blank"
             aria-label="Github profile"
+            rel="noopener noreferrer"
           >
             <img src="./img/github_icon.svg" alt="Github" />
           </a>
           <a
-            href="https://www.linkedin.com/"
+            href="https://www.linkedin.com/in/saguna-nathani-23bba515b/"
             target="_blank"
             aria-label="Linkedin profile"
+            rel="noopener noreferrer"
           >
             <img src="./img/linkedin_icon.svg" alt="LinkedIn" />
+          </a>
+          <a
+            href="https://medium.com/@sagunanathani/build-a-real-time-chat-app-with-expo-firebase-and-gifted-chat-eaf2e2a4ed45"
+            target="_blank"
+            aria-label="Medium profile"
+            rel="noopener noreferrer"
+          >
+            <img src="./img/medium_icon.svg" alt="Medium" />
           </a>
         </div>
       </div>
     </footer>
+
     <script src="./js/script.js"></script>
     <script src="js/tota11y.min.js"></script>
   </body>
