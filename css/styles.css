@@ -429,6 +429,62 @@ h1{
   }
 }
 
+.skill_table {
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+.skill_table table {
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 700px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
+  overflow: hidden;
+  font-family: 'Lato', sans-serif;
+}
+
+.skill_table th,
+.skill_table td {
+  padding: 15px 20px;
+  text-align: left;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.skill_table thead {
+  background-color: #007acc;
+  color: #ffffff;
+}
+
+.skill_table th[scope="col"] {
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.skill_table th[scope="row"] {
+  font-weight: 600;
+  color: #333;
+}
+
+.skill_table tbody tr:hover {
+  background-color: #f5faff;
+  transition: background-color 0.2s ease;
+}
+
+/* Responsive tweaks */
+@media (max-width: 600px) {
+  .skill_table table {
+    font-size: 0.9rem;
+  }
+
+  .skill_table th,
+  .skill_table td {
+    padding: 10px 12px;
+  }
+}
+
 .buttoncv{
     /* overwrites browser defaults and resets the border */
   border: none;
@@ -718,4 +774,44 @@ div.borderYtoX a:hover:before, div.borderYtoX a:hover:after
   .project-preview {
     padding: 0 20px;
   }
+}
+
+.about-section {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+  line-height: 1.8;
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+}
+
+.about-section h1 {
+  font-size: 2.2em;
+  text-align: center;
+  color: #0d6efd;
+  margin-bottom: 20px;
+}
+
+.about-section .text p {
+  margin-bottom: 15px;
+  font-size: 1.05em;
+}
+
+.about-section h2 {
+  font-size: 1.6em;
+  margin-top: 30px;
+  color: #222;
+}
+
+.about-section ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.about-section li {
+  background: #f9f9f9;
+  padding: 10px 15px;
+  margin: 6px 0;
+  border-radius: 8px;
+  border-left: 4px solid #0d6efd;
 }
