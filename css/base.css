@@ -1,0 +1,365 @@
+.logo img {
+    width: 57px; 
+    height: auto;
+    animation: float 3s ease-in-out infinite, scaleUp 4s ease-in-out infinite;
+    transform-origin: center;
+}
+
+.logo img:hover {
+  transform: scale(1.05);
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes scaleUp {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+.logo img:hover {
+  animation: rotate 1s ease-in-out;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg) scale(1.05);
+  }
+  to {
+    transform: rotate(360deg) scale(1.05);
+  }
+}
+
+.profile {
+  max-width: 700px;
+  margin: 100px auto;
+  padding: 15px;
+}
+
+.profile__portrait {
+  float: left;
+  width: 250px;
+  height: auto;
+  margin-right: 40px;
+  border-radius: 30%;
+}
+
+/* This will clear all floats, both right and left */
+.page-footer {
+    clear: both;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+/* Header Container */
+.page-header {
+  width: 100%;
+  padding: 1.2rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ffffff;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+}
+
+/* Navigation */
+.main-nav {
+  display: flex;
+  gap: 2rem;
+}
+
+/* Navigation Links */
+.nav-link {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #333;
+  text-decoration: none;
+  position: relative;
+  padding-bottom: 4px;
+  transition: color 0.3s ease;
+}
+
+/* Hover underline animation */
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0%;
+  height: 3px;
+  background: linear-gradient(90deg, #0077ff, #00c6ff);
+  border-radius: 2px;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #0077ff;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* Active page highlight */
+.nav-link.active {
+  color: #0077ff;
+}
+
+.nav-link.active::after {
+  width: 100%;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .main-nav {
+    gap: 1.2rem;
+  }
+
+  .nav-link {
+    font-size: 0.95rem;
+  }
+
+  .logo img {
+    height: 45px;
+  }
+}
+
+/* Hero Buttons Container */
+.hero-buttons {
+  display: flex;
+  /*justify-content: center;*/
+  gap: 1rem;
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
+}
+
+/* Base Button Style */
+.cta-button {
+  padding: 0.6rem 1.2rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+/* Primary Button (Gradient) */
+.cta-button.primary {
+  background: linear-gradient(135deg, #0077ff, #00c6ff);
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(0, 119, 255, 0.25);
+}
+
+.cta-button.primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 119, 255, 0.35);
+}
+
+/* Secondary Button (Outline) */
+.cta-button.secondary {
+  border: 2px solid #0077ff;
+  color: #0077ff;
+  background: transparent;
+}
+
+.cta-button.secondary:hover {
+  background: #0077ff;
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 119, 255, 0.25);
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cta-button {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* Featured Projects Section */
+.featured-projects {
+  padding: 3rem 2rem;
+  background: #ffffff;
+  text-align: center;
+}
+
+.featured-projects h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 2.5rem;
+  color: #1a1a1a;
+}
+
+/* Grid Layout */
+.project-preview {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.8rem;
+}
+
+/* Project Card */
+.project-card {
+  background: #f8faff;
+  padding: 1.8rem;
+  border-radius: 12px;
+  text-align: left;
+  border: 1px solid #e6ecf5;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+/* Title */
+.project-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.6rem;
+  color: #0077ff;
+}
+
+/* Description */
+.project-card p {
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.6;
+  margin-bottom: 0.6rem;
+}
+
+/* Deployment Line */
+.project-card .deploy {
+  font-size: 0.9rem;
+  color: #0077ff;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+/* Link */
+.project-link {
+  font-weight: 600;
+  color: #0077ff;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.project-link:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .featured-projects h2 {
+    font-size: 1.8rem;
+  }
+
+  .project-card {
+    padding: 1.4rem;
+  }
+
+  .project-card h3 {
+    font-size: 1.15rem;
+  }
+}
+
+/* Skills Section Container */
+.skills {
+  /*padding: 4rem 2rem;*/
+  background: #ffffff;
+}
+
+/* Section Heading */
+.skills h2 {
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+  color: #1a1a1a;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-align: center;
+}
+
+/* Skills Grid */
+.skills-list {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.2rem;
+  list-style: none;
+  padding: 0;
+}
+
+/* Individual Skill Item */
+.skills-list li {
+  background: #f1f5fb;
+  padding: 1rem 1.2rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: #333;
+  border-left: 4px solid #0077ff;
+  transition: all 0.3s ease;
+}
+
+/* Hover Animation */
+.skills-list li:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+/* Responsive Tweaks */
+@media (max-width: 768px) {
+  .skills h2 {
+    font-size: 1.8rem;
+  }
+
+  .skills-list {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+  }
+
+  .skills-list li {
+    font-size: 1rem;
+    padding: 0.9rem 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .skills {
+    padding: 3rem 1rem;
+  }
+
+  .skills h2 {
+    font-size: 1.6rem;
+  }
+
+  .skills-list li {
+    font-size: 0.95rem;
+    padding: 0.8rem 0.9rem;
+  }
+}

@@ -4,60 +4,30 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SAGUNA NATHANI Portfolio</title>
+
     <link rel="icon" type="image/png" href="./img/AI.png" sizes="16x16" />
+
     <link
       rel="stylesheet"
-      type="text/css"
       href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css"
     />
+
     <link
       href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" type="text/css" href="./css/styles.css" />
+
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/base.css" />
+
   </head>
 
   <body>
-    <!-- Header including the logo and the main navigation -->
-    <header class="page-header">
-      <div class="logo">
-        <img
-          src="./img/portfolio_logo.png"
-          alt="Saguna Nathani portfolio logo"
-        />
-      </div>
-      <nav class="page-header__item">
-        <div class="container borderYtoX">
-          <a
-            href="index.html"
-            class="navigation-list__item navigation-list__item--active"
-            rel="noopener noreferrer"
-            >Home</a
-          >
-          <a
-            href="about.html"
-            class="navigation-list__item navigation-list__item--active"
-            aria-label="About this website"
-            rel="noopener noreferrer"
-            >About</a
-          >
-          <a
-            href="work.html"
-            class="navigation-list__item navigation-list__item--active"
-            rel="noopener noreferrer"
-            >Work</a
-          >
-          <a
-            href="contact.html"
-            class="navigation-list__item navigation-list__item--active"
-            rel="noopener noreferrer"
-            >Contact</a
-          >
-        </div>
-      </nav>
-    </header>
+    <!-- Header -->
+    <div id="header"></div>
 
     <main>
+      <!-- Hero Section -->
       <section class="hero">
         <div class="profile">
           <img
@@ -65,140 +35,146 @@
             class="profile__portrait"
             alt="Saguna Nathani Portrait"
           />
-          <div>
+
+          <div class="profile__content">
             <h1>Hi, I'm Saguna Nathani 👋</h1>
+
             <p>
-              A passionate <strong>web and mobile developer</strong> based in
-              Regensburg, Germany. I specialize in building responsive,
-              accessible, and user-friendly applications using modern
-              technologies like
-              <strong>
-                React.js, React Native, Angular, Firebase, and Node.js</strong
-              >.
+                A passionate <strong>web and mobile developer</strong> based in Regensburg, Germany. 
+                I specialize in building responsive, accessible, and user‑friendly applications using 
+                modern technologies such as 
+                <strong>React.js, React Native, Angular, Firebase, Python, Django, and Node.js</strong>.
             </p>
+
             <p>
-              I enjoy solving technical challenges, creating polished user
-              experiences, and working with Agile workflows like Kanban and user
-              stories.
+                I love solving technical challenges, crafting polished user experiences, and working 
+                with Agile methodologies like Kanban and user stories to deliver clean, scalable solutions.
             </p>
-            <a href="work.html" class="cta-button">🚀 View My Projects</a>
-            <a href="contact.html" class="cta-button secondary"
-              >📬 Get in Touch</a
-            >
+
+            <div class="hero-buttons">
+                <a href="work.html" class="cta-button primary">🚀 View My Projects</a>
+                <a href="contact.html" class="cta-button secondary">📬 Get in Touch</a>
+            </div>
           </div>
         </div>
       </section>
 
+      <!-- Skills Section -->
       <section class="skills">
         <h2>What I Do</h2>
+
         <ul class="skills-list">
-          <li>✅ React Native & Expo Development</li>
-          <li>✅ Angular & TypeScript Applications</li>
-          <li>✅ Firebase Integration & Authentication</li>
-          <li>✅ RESTful APIs with Node.js & Express</li>
-          <li>✅ Accessibility & Responsive Design</li>
-          <li>✅ Agile Project Management (Kanban, User Flows)</li>
+            <!-- Full‑Stack & Backend -->
+            <li>✅ Full‑Stack Development (Django, Node.js, Express)</li>
+            <li>✅ Python & Django (REST APIs, Templates, ORM, Authentication)</li>
+            <li>✅ PostgreSQL, Cloudinary & Database Design</li>
+            <li>✅ RESTful API Development & Integration</li>
+
+            <!-- Frontend -->
+            <li>✅ Angular & TypeScript Applications</li>
+            <li>✅ React Native & Expo Mobile Development</li>
+            <li>✅ Modern JavaScript (ES6+), HTML5 & CSS3</li>
+            <li>✅ Responsive UI Design & Accessibility</li>
+
+            <!-- Cloud, Deployment & DevOps -->
+            <li>✅ Deployment on Render, Railway, Netlify & GitHub Pages</li>
+            <li>✅ CI/CD with GitHub Actions</li>
+
+            <!-- Testing -->
+            <li>✅ Automated Testing (Jest, Cucumber, Puppeteer)</li>
+
+            <!-- Tools & Workflow -->
+            <li>✅ Agile Project Management (Kanban, User Stories, User Flows)</li>
+            <li>✅ Version Control with Git & GitHub</li>
         </ul>
       </section>
 
-      <section class="featured-projects">
-        <h2>Featured Projects</h2>
+      <!-- Featured Projects -->
+        <section class="featured-projects">
+        <h2>✨ Featured Projects</h2>
+
         <div class="project-preview">
-          <!-- React Native Chat App -->
-          <div class="project-card">
-            <h3>React Native Chat App</h3>
-            <p>Image, audio, and location sharing with Firebase backend.</p>
-            <a href="work.html#chat-app">🔗 View Project</a>
-          </div>
 
-          <!-- Angular Client Dashboard -->
-          <div class="project-card">
+            <!-- Recipe App -->
+            <div class="project-card">
+            <h3>Recipe Management Django App</h3>
+            <p>A full‑stack recipe management platform with authentication, recipe creation, image uploads, and REST API endpoints.</p>
+            <p class="deploy">Deployed on <strong>Render</strong></p>
+            <a href="work.html#python-django-recipe-app" class="project-link">🔗 View Project</a>
+            </div>
+
+            <!-- Bookstore App -->
+            <div class="project-card">
+            <h3>Bookstore Management Django App</h3>
+            <p>A complete bookstore system with CRUD operations, Cloudinary image storage, analytics, and secure authentication.</p>
+            <p class="deploy">Deployed on <strong>Railway</strong></p>
+            <a href="work.html#python-django-bookstore-app" class="project-link">🔗 View Project</a>
+            </div>
+
+            <!-- Chat App -->
+            <div class="project-card">
+            <h3>React Native Real‑Time Chat App</h3>
+            <p>Cross‑platform chat app with real‑time messaging, image sharing, audio messages, and location support using Firebase.</p>
+            <p class="deploy">Deployed on <strong>Expo</strong></p>
+            <a href="work.html#chat-app" class="project-link">🔗 View Project</a>
+            </div>
+
+            <!-- Angular Dashboard -->
+            <div class="project-card">
             <h3>Angular Client Dashboard</h3>
-            <p>Secure login, analytics, and role-based access.</p>
-            <a href="work.html#client-dashboard">🔗 View Project</a>
-          </div>
+            <p>Secure dashboard with authentication, role‑based access, charts, and responsive UI components built with Angular.</p>
+            <p class="deploy">Deployed on <strong>Netlify</strong></p>
+            <a href="work.html#client-dashboard" class="project-link">🔗 View Project</a>
+            </div>
 
-          <!-- myFlix Client -->
-          <div class="project-card">
-            <h3>myFlix Client (Frontend)</h3>
-            <p>
-              Responsive React app for managing favorite movies and user
-              profiles.
-            </p>
-            <a href="work.html#myflix-client">🔗 View Project</a>
-          </div>
+            <!-- myFlix Client -->
+            <div class="project-card">
+            <h3>myFlix Movie App (Frontend)</h3>
+            <p>Responsive React app for browsing movies, managing favorites, and updating profiles using a custom REST API.</p>
+            <p class="deploy">Deployed on <strong>Netlify</strong></p>
+            <a href="work.html#myflix-client" class="project-link">🔗 View Project</a>
+            </div>
 
-          <!-- myFlix Movie API -->
-          <div class="project-card">
+            <!-- myFlix API -->
+            <div class="project-card">
             <h3>myFlix Movie API (Backend)</h3>
-            <p>RESTful API with secure authentication and CRUD operations.</p>
-            <a href="work.html#myflix-api">🔗 View Project</a>
-          </div>
+            <p>Node.js + Express REST API with secure authentication, movie data, and CRUD operations using MongoDB.</p>
+            <p class="deploy">Deployed on <strong>Render</strong></p>
+            <a href="work.html#myflix-api" class="project-link">🔗 View Project</a>
+            </div>
 
-          <!-- Meet App -->
-          <div class="project-card">
-            <h3>Meet App (Testing Project)</h3>
-            <p>
-              PWA with Google Calendar API, offline support, and automated
-              testing.
-            </p>
-            <a href="work.html#meet-app">🔗 View Project</a>
-          </div>
+            <!-- Meet App -->
+            <div class="project-card">
+            <h3>Meet App (PWA)</h3>
+            <p>Progressive Web App with offline support, Google Calendar API integration, charts, and automated testing.</p>
+            <p class="deploy">Deployed on <strong>GitHub Pages</strong></p>
+            <a href="work.html#meet-app" class="project-link">🔗 View Project</a>
+            </div>
 
-          <!-- Simple JavaScript App -->
-          <div class="project-card">
-            <h3>Simple JavaScript App</h3>
-            <p>
-              Vanilla JS app demonstrating DOM manipulation and API consumption.
-            </p>
-            <a href="work.html#simple-js-app">🔗 View Project</a>
-          </div>
+            <!-- Pokédex App -->
+            <div class="project-card">
+            <h3>Pokédex JavaScript App</h3>
+            <p>Simple JavaScript app fetching Pokémon data from an external API with dynamic UI and modals.</p>
+            <p class="deploy">Deployed on <strong>GitHub Pages</strong></p>
+            <a href="work.html#simple-js-app" class="project-link">🔗 View Project</a>
+            </div>
 
-          <!-- jQuery To-Do List App -->
-          <div class="project-card">
-            <h3>jQuery To-Do List App</h3>
-            <p>Task management app with dynamic add/remove functionality.</p>
-            <a href="work.html#jquery-todo">🔗 View Project</a>
-          </div>
+            <!-- jQuery To‑Do App -->
+            <div class="project-card">
+            <h3>jQuery To‑Do List App</h3>
+            <p>Lightweight task manager with add/remove functionality and smooth UI interactions using jQuery.</p>
+            <p class="deploy">Deployed on <strong>GitHub Pages</strong></p>
+            <a href="work.html#jquery-todo" class="project-link">🔗 View Project</a>
+            </div>
+
         </div>
-      </section>
+        </section>
     </main>
 
-    <footer class="page-footer">
-      <p>Find me on</p>
-      <div class="social-media">
-        <!-- img set with svg (set width,height,bg with text editor)-->
-        <a
-          href="https://x.com/SagunaNathani"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img src="./img/twitter_icon.svg" alt="Twitter" />
-        </a>
-        <a
-          href="https://github.com/sagunanathani"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img src="./img/github_icon.svg" alt="Github" />
-        </a>
-        <a
-          href="https://www.linkedin.com/in/saguna-nathani-23bba515b/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img src="./img/linkedin_icon.svg" alt="LinkedIn" />
-        </a>
-        <a
-          href="https://medium.com/@sagunanathani/build-a-real-time-chat-app-with-expo-firebase-and-gifted-chat-eaf2e2a4ed45"
-          target="_blank"
-          aria-label="Medium profile"
-          rel="noopener noreferrer"
-        >
-          <img src="./img/medium_icon.svg" alt="Medium" />
-        </a>
-      </div>
-    </footer>
+    <!-- Footer -->
+    <div id="footer"></div>
+
+    <script src="js/include.js"></script>
     <script src="js/tota11y.min.js"></script>
   </body>
 </html>

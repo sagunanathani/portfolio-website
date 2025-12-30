@@ -4,157 +4,156 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SAGUNA NATHANI Portfolio</title>
+
     <link rel="icon" type="image/png" href="./img/AI.png" sizes="16x16" />
+
     <link
       rel="stylesheet"
-      type="text/css"
       href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css"
     />
+
     <link
       href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap"
       rel="stylesheet"
     />
 
-    <!-- External style in folder but set a link with css file -->
     <link rel="stylesheet" type="text/css" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/base.css" />
+    <link rel="stylesheet" href="./css/about.css" />
   </head>
 
   <body>
-    <!-- Header including the logo and the main navigation -->
-    <header class="page-header">
-      <div class="logo">
-        <img
-          src="./img/portfolio_logo.png"
-          alt="Saguna Nathani portfolio logo"
-        />
-      </div>
-      <nav class="page-header__item">
-        <div class="container borderYtoX">
-          <a
-            href="index.html"
-            class="navigation-list__item navigation-list__item--active"
-            rel="noopener noreferrer"
-            >Home</a
-          >
-          <a
-            href="about.html"
-            class="navigation-list__item navigation-list__item--active"
-            rel="noopener noreferrer"
-            aria-label="About this website"
-            >About</a
-          >
-          <a
-            href="work.html"
-            class="navigation-list__item navigation-list__item--active"
-            rel="noopener noreferrer"
-            >Work</a
-          >
-          <a
-            href="contact.html"
-            class="navigation-list__item navigation-list__item--active"
-            rel="noopener noreferrer"
-            >Contact</a
-          >
-        </div>
-      </nav>
-    </header>
+    <!-- Header -->
+    <div id="header"></div>
 
-    <main>
-      <h1>About me</h1>
-      <div class="text">
+    <main class="about-page">
+      <!-- Page Title -->
+        <header class="about-header">
+            <h1>About Me</h1>
+            <p class="subtitle">Full‑Stack Developer • Problem Solver • Lifelong Learner</p>
+        </header>
+
+        <section class="about-intro">
         <p>
-          Welcome to my website! I'm a passionate
-          <strong>Full-Stack Developer</strong> dedicated to building
-          <strong>efficient, scalable, and user-friendly applications</strong>.
-          With experience in both <strong>frontend</strong> and
-          <strong>backend</strong> development, I enjoy crafting seamless
-          digital experiences that make a real impact.
+            Hi! I'm Saguna Nathani — a dedicated <strong>Full‑Stack Developer</strong> with a passion 
+            for building <strong>efficient, scalable, and user‑friendly applications</strong>. 
+            I work across both <strong>frontend</strong> and <strong>backend</strong> technologies, 
+            creating seamless digital experiences that solve real‑world problems.
         </p>
 
         <p>
-          My mission is to <strong>blend creativity with technology</strong> —
-          designing solutions that not only look great but also perform
-          exceptionally well. I’m constantly learning, exploring new tools, and
-          improving my skills in this ever-evolving world of web development.
+            I love blending <strong>creativity with technology</strong> — designing interfaces that feel 
+            intuitive while ensuring the architecture behind them is clean, secure, and reliable. 
+            I’m always learning, exploring new tools, and improving my craft in this fast‑moving world 
+            of web and mobile development.
         </p>
-      </div>
-      <section class="text skills">
+        </section>
+
+      <!-- Skills Section -->
+      <section class="about-skills">
         <h2>Skills & Expertise</h2>
-        <ul>
-          <li>
-            <strong>Frontend:</strong> React, Vue, HTML5, CSS3, JavaScript
-            (ES6+)
-          </li>
+
+        <ul class="skills-list">
+          <li><strong>Frontend:</strong> React, Vue, HTML5, CSS3, JavaScript (ES6+)</li>
           <li><strong>Backend:</strong> Node.js, Django, Firebase</li>
           <li><strong>Databases:</strong> MongoDB, PostgreSQL, MySQL</li>
-          <li>
-            <strong>Practices:</strong> Test-Driven Development (TDD), Agile
-            Methodologies
-          </li>
+          <li><strong>Practices:</strong> Test‑Driven Development (TDD), Agile Methodologies</li>
           <li><strong>Cloud & DevOps:</strong> AWS, Docker, CI/CD Pipelines</li>
         </ul>
       </section>
 
-      <section class="text">
-        <h2>Connect with Me</h2>
-        <p>
-          Feel free to explore my work, connect, or collaborate! <br />
-          <a
-            href="https://www.linkedin.com/in/saguna-nathani-23bba515b/"
-            target="_blank"
-            rel="noopener noreferrer"
-            >LinkedIn</a
-          >
-          |
-          <a
-            href="https://github.com/sagunanathani"
-            target="_blank"
-            rel="noopener noreferrer"
-            >GitHub</a
-          >
-        </p>
-        <a
-          href="assets/Saguna_Nathani_Lebenslauf.pdf"
-          class="buttoncv"
-          download
-        >
-          Download CV
-        </a>
-      </section>
+        <section class="about-certifications">
+            <h2>Certifications</h2>
+
+            <ul class="cert-list">
+                <!-- Step 1: Foundations -->
+                <li>1️⃣ Intro to Frontend Development – CareerFoundry</li>
+                <li>2️⃣ Modern HTML & CSS (incl. Sass) – Udemy</li>
+
+                <!-- Step 2: Programming & Web -->
+                <li>3️⃣ JavaScript Algorithms & Data Structures – freeCodeCamp</li>
+                <li>4️⃣ Responsive Web Design – freeCodeCamp</li>
+                <li>5️⃣ Frontend Development Libraries – freeCodeCamp</li>
+                <li>6️⃣ Python for Web Developers – CareerFoundry</li>
+                <li>7️⃣ Python for Everybody – Coursera</li>
+
+                <!-- Step 3: Specialization -->
+                <li>8️⃣ React JS Developer Certification – Tops Technologies</li>
+                <li>9️⃣ Full‑Stack Immersion Program – CareerFoundry</li>
+
+                <!-- Step 4: Tools & Language -->
+                <li>🔟 Git & GitHub Essentials – Udemy</li>
+                <li>✅ German Language Certification (B1 Level) – VHS</li>
+            </ul>
+        </section>
+
+      <!-- Connect Section -->
+        <section class="about-connect">
+            <h2>Connect with Me</h2>
+
+            <p class="connect-text">
+                Feel free to explore my work, connect, or collaborate!  
+                <br />
+                <a href="https://www.linkedin.com/in/saguna-nathani-23bba515b/" target="_blank" class="connect-link">LinkedIn</a>
+                <span class="divider">|</span>
+                <a href="https://github.com/sagunanathani" target="_blank" class="connect-link">GitHub</a>
+            </p>
+
+            <a href="assets/Saguna_Nathani_Lebenslauf.pdf" class="buttoncv" download>
+                📄 Download CV
+            </a>
+        </section>
+
+      <!-- Skills Table -->
+        <section class="skill-table-section">
+        <h2>Experience Overview</h2>
+
+        <div class="skill-table-wrapper">
+            <table class="skill-table">
+            <thead>
+                <tr>
+                <th>Skills</th>
+                <th>Years of Experience</th>
+                <th>Level of Expertise</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                <td>Frontend (HTML, CSS, JavaScript, React, Angular)</td>
+                <td>2+ years</td>
+                <td>Intermediate</td>
+                </tr>
+
+                <tr>
+                <td>Backend (Node.js, Express)</td>
+                <td>2 years</td>
+                <td>Intermediate</td>
+                </tr>
+
+                <tr>
+                <td>Mobile Development</td>
+                <td>0 years</td>
+                <td>Beginner</td>
+                </tr>
+
+                <tr>
+                <td>Databases (PostgreSQL, MongoDB)</td>
+                <td>1–2 years</td>
+                <td>Intermediate</td>
+                </tr>
+
+                <tr>
+                <td>DevOps (CI/CD, Render, Railway)</td>
+                <td>1 year</td>
+                <td>Beginner</td>
+                </tr>
+            </tbody>
+            </table>
+        </div>
+        </section>
     </main>
-    <div class="skill_table">
-      <table>
-        <thead>
-          <tr>
-            <th scope="col">Skills</th>
-            <th scope="col">Years of Experience</th>
-            <th scope="col">Level of Expertise</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th scope="row">HTML</th>
-            <td>4</td>
-            <td>Advanced</td>
-          </tr>
-          <tr>
-            <th scope="row">CSS</th>
-            <td>3</td>
-            <td>Intermediate</td>
-          </tr>
-          <tr>
-            <th scope="row">JavaScript</th>
-            <td>2</td>
-            <td>Intermediate</td>
-          </tr>
-          <tr>
-            <th scope="row">React</th>
-            <td>1.5</td>
-            <td>Beginner</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+
     <div class="svg-wrapper">
       <svg
         id="about-picture"
@@ -2227,42 +2226,11 @@
         </g>
       </svg>
     </div>
-    <footer class="page-footer">
-      <div>
-        <p>Find me on</p>
-        <div>
-          <!-- img set with svg (set width,height,bg with text editor)-->
-          <a
-            href="https://x.com/SagunaNathani"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img src="./img/twitter_icon.svg" alt="Twitter" />
-          </a>
-          <a
-            href="https://github.com/sagunanathani"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img src="./img/github_icon.svg" alt="Github" />
-          </a>
-          <a
-            href="https://www.linkedin.com/in/saguna-nathani-23bba515b/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img src="./img/linkedin_icon.svg" alt="LinkedIn" />
-          </a>
-          <a
-            href="https://medium.com/@sagunanathani/build-a-real-time-chat-app-with-expo-firebase-and-gifted-chat-eaf2e2a4ed45"
-            target="_blank"
-            aria-label="Medium profile"
-          >
-            <img src="./img/medium_icon.svg" alt="Medium" />
-          </a>
-        </div>
-      </div>
-    </footer>
+
+        <!-- Footer -->
+    <div id="footer"></div>
+    <script src="js/include.js"></script>
     <script src="js/tota11y.min.js"></script>
+
   </body>
 </html>

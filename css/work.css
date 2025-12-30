@@ -1,0 +1,184 @@
+/* Work Section */
+.work-section {
+  max-width: 1200px;
+  margin: 4rem auto;
+  padding: 0 1.5rem;
+  text-align: center;
+}
+
+.work-title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #1a1a1a;
+}
+
+.work-description {
+  font-size: 1.15rem;
+  color: #555;
+  line-height: 1.7;
+  max-width: 800px;
+  margin: 0 auto 2.5rem;
+}
+
+/* Optional: Add a subtle underline or sparkle effect */
+.work-title::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(to right, #0077ff, #00c6ff);
+  margin: 0.5rem auto 0;
+  border-radius: 2px;
+}
+
+/* -----------------------------------
+   WORK PAGE — MODERN GRID LAYOUT
+----------------------------------- */
+
+.grid-project-list {
+  max-width: 1200px;
+  margin: 3rem auto;
+  padding: 0 1.5rem;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(370px, 1fr));
+  gap: 2.2rem;
+}
+
+/* -----------------------------------
+   PROJECT CARD
+----------------------------------- */
+
+.grid__item {
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 16px;
+
+  border: 1px solid #e6e9f0;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.06);
+
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.grid__item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 32px rgba(0,0,0,0.15);
+}
+
+/* -----------------------------------
+   HEADINGS & TEXT
+----------------------------------- */
+
+.grid__item h2 {
+  font-size: 1.45rem;
+  margin-bottom: 0.8rem;
+  color: #1a1a1a;
+  font-weight: 700;
+}
+
+.grid__item p {
+  color: #555;
+  line-height: 1.65;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+/* -----------------------------------
+   LINKS
+----------------------------------- */
+
+.grid__item a {
+  font-weight: 700;
+  color: #0077ff;
+  text-decoration: none;
+  transition: color 0.25s ease;
+}
+
+.grid__item a:hover {
+  color: #005fcc;
+  text-decoration: underline;
+}
+
+/* -----------------------------------
+   LISTS INSIDE CARDS
+----------------------------------- */
+
+.grid__item ul {
+  padding-left: 1.2rem;
+  margin-top: 0.5rem;
+}
+
+.grid__item ul li {
+  margin-bottom: 0.4rem;
+  color: #444;
+  list-style-type: none;
+}
+
+/* -----------------------------------
+   CARD SPACING IMPROVEMENTS
+----------------------------------- */
+
+.grid__item strong {
+  color: #222;
+}
+
+/* -----------------------------------
+   RESPONSIVE DESIGN
+----------------------------------- */
+
+@media (max-width: 900px) {
+  .grid-project-list {
+    gap: 1.8rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .grid__item {
+    padding: 1.5rem;
+  }
+
+  .grid__item h2 {
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 450px) {
+  .grid__item {
+    padding: 1.2rem;
+  }
+
+  .grid__item h2 {
+    font-size: 1.15rem;
+  }
+}
+
+/* Filter Buttons */
+.project-filters {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.filter-btn {
+  background: #847e7e;
+  border: none;
+  padding: 0.7rem 1.4rem;
+  margin: 0.3rem;
+  border-radius: 25px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.filter-btn:hover {
+  background: #0077ff;
+  color: #fff;
+}
+
+.filter-btn.active {
+  background: #0077ff;
+  color: #fff;
+  border: 2px solid #fff;
+  padding: 0.7rem 1.6rem;
+}
+

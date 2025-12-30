@@ -15,313 +15,354 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" type="text/css" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/base.css" />
+    <link rel="stylesheet" href="./css/work.css" />
   </head>
   <body>
     <!-- Header including the logo and the main navigation -->
-    <header class="page-header">
-      <div class="logo">
-        <img
-          src="./img/portfolio_logo.png"
-          alt="Saguna Nathani portfolio logo"
-        />
-      </div>
-      <nav class="page-header__item">
-        <div class="container borderYtoX">
-          <a
-            href="index.html"
-            class="navigation-list__item navigation-list__item--active"
-            rel="noopener noreferrer"
-            >Home</a
-          >
-          <a
-            href="about.html"
-            class="navigation-list__item navigation-list__item--active"
-            aria-label="About this website"
-            rel="noopener noreferrer"
-            >About</a
-          >
-          <a
-            href="work.html"
-            class="navigation-list__item navigation-list__item--active"
-            rel="noopener noreferrer"
-            >Work</a
-          >
-          <a
-            href="contact.html"
-            class="navigation-list__item navigation-list__item--active"
-            rel="noopener noreferrer"
-            >Contact</a
-          >
-        </div>
-      </nav>
-    </header>
-
+    <div id="header"></div>
     <main>
       <!-- Main content -->
-      <section>
-        <h1>Work</h1>
-        <h1>✨ Featured Projects</h1>
-        <p>
-          A collection of my web development projects showcasing skills in
-          <strong
-            >frontend development, backend APIs, testing, and UI design</strong
-          >. Each project highlights a different part of my journey as a
-          developer.
+      <section class="work-section">
+        <h1 class="work-title">✨ Featured Projects</h1>
+        <p class="work-description">
+            A curated collection of my development work across 
+            <strong>frontend engineering, backend APIs, full‑stack architecture, mobile development, automated testing, and modern UI/UX design</strong>. 
+            Each project highlights a different part of my journey — from building responsive interfaces to deploying secure, scalable applications.
         </p>
+
+        <!-- Filter Buttons -->
+        <div class="project-filters">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="frontend">Frontend</button>
+            <button class="filter-btn" data-filter="backend">Backend</button>
+            <button class="filter-btn" data-filter="mobile">Mobile</button>
+            <button class="filter-btn" data-filter="fullstack">Full‑Stack</button>
+        </div>
+
         <div class="grid-project-list">
           <!-- Grid items will live here -->
 
-          <div class="grid__item">
+          <div class="grid__item" data-category="frontend">
             <h2>myFlix Client (Frontend)</h2>
-            <p>
-              A responsive client-side application built with
-              <strong>React.js</strong> that consumes the myFlix API. Users can
-              sign up, log in, update profiles, and manage their list of
-              favorite movies. Deployed on Netlify.
-            </p>
-            <a
-              href="https://myflix-movies-sagunanathani.netlify.app/signin"
-              target="_blank"
-              rel="noopener noreferrer"
-              >🌐 Live App</a
-            >
-            |
-            <a
-              href="https://github.com/sagunanathani/myFlix-client"
-              target="_blank"
-              rel="noopener noreferrer"
-              >💻 GitHub Repo</a
-            >
-            <p>
-              <strong>Technologies Used:</strong> React.js, JavaScript, CSS,
-              Netlify
-            </p>
-          </div>
-
-          <div class="grid__item">
-            <h2>myFlix Movie API (Backend)</h2>
-            <p>
-              A RESTful API built with
-              <strong>Node.js, Express, and PostgreSQL</strong>, providing
-              movie, director, and genre data. Includes secure user
-              authentication (JWT + hashed passwords) and CRUD operations for
-              user profiles and favorite movies. Deployed on Render.
-            </p>
-            <a
-              href="https://myflix-movie-api-2r07.onrender.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              >🌐 Live API</a
-            >
-            |
-            <a
-              href="https://github.com/sagunanathani/myFlix_movie_api"
-              target="_blank"
-              rel="noopener noreferrer"
-              >💻 GitHub Repo</a
-            >
-            <p>
-              <strong>Technologies Used:</strong> Node.js, Express, PostgreSQL,
-              JWT, Render
-            </p>
-          </div>
-
-          <div class="grid__item">
-            <h2>Meet App (Testing Project)</h2>
-            <p>
-              A progressive web application (PWA) built with
-              <strong>React</strong> and <strong>Google Calendar API</strong>.
-              Users can authenticate with Google, view events, and filter them
-              by location or number of events. Includes offline functionality
-              and automated testing with Jest, Cucumber, and Puppeteer. Deployed
-              on Vercel.
-            </p>
-            <a
-              href="https://meetup-react-sagunanathani.vercel.app/"
-              target="_blank"
-              rel="noopener noreferrer"
-              >🌐 Live App</a
-            >
-            |
-            <a
-              href="https://github.com/sagunanathani/meetup-react-app"
-              target="_blank"
-              rel="noopener noreferrer"
-              >💻 GitHub Repo</a
-            >
-            <p>
-              <strong>Technologies Used:</strong> React, Google Calendar API,
-              Jest, Cucumber, Puppeteer, Vercel
-            </p>
-          </div>
-
-          <div class="grid__item">
-            <h2>Simple JavaScript App</h2>
-            <p>
-              A beginner-friendly project built with
-              <strong>vanilla JavaScript</strong>. Demonstrates DOM manipulation
-              and API consumption by fetching and displaying data dynamically.
-              Deployed with GitHub Pages.
-            </p>
-            <a
-              href="https://sagunanathani.github.io/simple-js-app/"
-              target="_blank"
-              rel="noopener noreferrer"
-              >🌐 Live App</a
-            >
-            |
-            <a
-              href="https://github.com/sagunanathani/simple-js-app"
-              target="_blank"
-              rel="noopener noreferrer"
-              >💻 GitHub Repo</a
-            >
-            <p>
-              <strong>Technologies Used:</strong> JavaScript, HTML, CSS, GitHub
-              Pages
-            </p>
-          </div>
-
-          <div class="grid__item">
-            <h2>jQuery To-Do List App</h2>
-            <p>
-              A simple yet functional to-do list application built with
-              <strong>jQuery</strong>. Users can add, complete, and remove tasks
-              dynamically. Deployed with GitHub Pages.
-            </p>
-            <a
-              href="https://sagunanathani.github.io/jQuery-to-do-list-app/"
-              target="_blank"
-              rel="noopener noreferrer"
-              >🌐 Live App</a
-            >
-            |
-            <a
-              href="https://github.com/sagunanathani/jQuery-to-do-list-app"
-              target="_blank"
-              rel="noopener noreferrer"
-              >💻 GitHub Repo</a
-            >
-            <p>
-              <strong>Technologies Used:</strong> jQuery, HTML, CSS, GitHub
-              Pages
-            </p>
-          </div>
-          <div class="grid__item">
-            <h2>Chat App (React Native)</h2>
-            <p>
-              A modern, cross-platform chat application built with React Native
-              (Expo) and Firebase. ChatApp allows users to join anonymously,
-              send and receive real-time messages, share photos (from library or
-              camera), and share their live location. The app is designed with
-              offline support, accessibility, and a clean UI.
-            </p>
-            <a
-              href="https://youtube.com/shorts/oVr9hq4dXmw?feature=share"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              🌐Watch demo video</a
-            >
-            |
-            <a
-              href="https://github.com/sagunanathani/ReactNativeChatApp"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              💻 GitHub Repo
-            </a>
-            <p>
-              <strong>Technologies Used:</strong> React Native, Expo, Firebase,
-              JavaScript
-            </p>
-          </div>
-
-          <div class="grid__item">
-            <h2>myFlix-Angular-client (Angular)</h2>
-            <p>
-              This Angular single-page application (SPA) is the client-side
-              interface for the myFlix Movie API. A modern Angular frontend for
-              the myFlix Movie App, which interacts with a REST API backend to
-              display movies, directors, genres, and user data. This client
-              allows users to register, log in, manage their favorite movies,
-              and explore detailed movie information.
-            </p>
-            <a
-              href="https://sagunanathani.github.io/myFlix-Angular-client/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              🌐 Live App
-            </a>
-            |
-            <a
-              href="https://github.com/sagunanathani/myFlix-Angular-client"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              💻 GitHub Repo
-            </a>
-            <p>
-              <strong>Technologies Used:</strong> Angular, TypeScript, SCSS,
-              REST API
-            </p>
-            <p><strong>Project Materials:</strong></p>
-            <ul>
-              <li>
-                <a href="assets/User flows.pdf" target="_blank">User Stories</a>
-                – defined client roles and permissions
-              </li>
-              <li>
-                <a
-                  href="https://trello.com/b/OBd2vLXg/angular-app-myflix"
-                  target="_blank"
-                  >Kanban Board</a
-                >
-                – organized tasks by sprint
-              </li>
-              <li>
-                <a href="assets/Agile_Environment.pdf" target="_blank"
-                  >Agile Reflection</a
-                >
-                – documented sprint outcomes
-              </li>
-            </ul>
-          </div>
-
-          <div class="grid__item">
-            <h2>
-              Python/Django Web App
-              <span style="color: #888; font-size: 0.9rem">(In Progress)</span>
-            </h2>
-            <p>
-                A full-stack web application built with <strong>Python</strong> and <strong>Django</strong>.
-                The project manages user data, generates backend analytics, and delivers dynamic content
-                through Django templates and RESTful APIs. Key features include secure authentication,
-                modular architecture, and scalable design patterns.
-            </p>
 
             <p>
-              <em>Successfully deployed on Render and added to my portfolio.</em>
+                A responsive client-side web application built with <strong>React.js</strong> 
+                that interacts with the myFlix Movie API. Users can register, log in, update 
+                their profiles, browse movies, and manage their list of favorite films. 
+                Designed with reusable components, modular architecture, and responsive UI. 
+                Deployed on Netlify.
             </p>
-            <a
-                href="https://django-recipe-app-6t2d.onrender.com"
-                target="_blank"
+
+            <a 
+                href="https://myflix-movies-sagunanathani.netlify.app/signin" 
+                target="_blank" 
                 rel="noopener noreferrer"
             >
-             🌐 Live App
+                🌐 Live App
             </a>
             |
-              <a
-              href="https://github.com/sagunanathani/django-recipe-app"
-              target="_blank"
-              rel="noopener noreferrer"
-              >💻 GitHub Repo</a
-            ><br />
+            <a 
+                href="https://github.com/sagunanathani/myFlix-client" 
+                target="_blank" 
+                rel="noopener noreferrer"
+            >
+                💻 GitHub Repo
+            </a>
+            <br />
 
             <p>
-                <strong>Technologies Used:</strong> Python, Django, HTML, CSS, JavaScript, REST API,
-                PostgreSQL, GitHub Actions (CI/CD)
+                <strong>Technologies Used:</strong> React.js, JavaScript, HTML, CSS, REST API, 
+                Netlify
+            </p>
+
+            <p><strong>Project Materials:</strong></p>
+            <ul>
+                <li>User Stories – defining movie browsing and profile features</li>
+                <li>Component Architecture – reusable UI and logic components</li>
+                <li>API Integration – consuming REST endpoints for movies & users</li>
+                <li>Responsive Layout – optimized for desktop and mobile</li>
+            </ul>
+            </div>
+
+          <div class="grid__item" data-category="backend">
+            <h2>myFlix Movie API (Backend)</h2>
+
+            <p>
+                A RESTful backend API built with <strong>Node.js</strong>, 
+                <strong>Express</strong>, and <strong>PostgreSQL</strong>. Provides movie, 
+                director, and genre data while supporting secure user authentication using 
+                JWT and hashed passwords. Includes full CRUD operations for user profiles 
+                and favorite movies. Deployed on Render.
+            </p>
+
+            <a 
+                href="https://myflix-movie-api-2r07.onrender.com/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+            >
+                🌐 Live API
+            </a>
+            |
+            <a 
+                href="https://github.com/sagunanathani/myFlix_movie_api" 
+                target="_blank" 
+                rel="noopener noreferrer"
+            >
+                💻 GitHub Repo
+            </a>
+            <br />
+
+            <p>
+                <strong>Technologies Used:</strong> Node.js, Express, PostgreSQL, REST API, 
+                JWT Authentication, bcrypt, Render
+            </p>
+
+            <p><strong>Project Materials:</strong></p>
+            <ul>
+                <li>API Documentation – endpoints for movies, users, and favorites</li>
+                <li>Database Schema – modeling movies, genres, directors, and users</li>
+                <li>Authentication Flow – JWT token handling and password hashing</li>
+                <li>Postman Collection – testing CRUD operations</li>
+            </ul>
+            </div>
+
+          <div class="grid__item" data-category="frontend">
+            <h2>Meet App (PWA)</h2>
+
+            <p>
+                A progressive web application built with <strong>React</strong> and the 
+                <strong>Google Calendar API</strong>. Users can authenticate with Google, 
+                view upcoming events, and filter them by city or number of events. Includes 
+                offline functionality, serverless functions, and automated testing using 
+                Jest, Cucumber, and Puppeteer. Deployed on Vercel.
+            </p>
+
+            <a 
+                href="https://meetup-react-sagunanathani.vercel.app/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+            >
+                🌐 Live App
+            </a>
+            |
+            <a 
+                href="https://github.com/sagunanathani/meetup-react-app" 
+                target="_blank" 
+                rel="noopener noreferrer"
+            >
+                💻 GitHub Repo
+            </a>
+            <br />
+
+            <p>
+                <strong>Technologies Used:</strong> React, Google Calendar API, Serverless 
+                Functions, Jest, Cucumber, Puppeteer, Vercel
+            </p>
+
+            <p><strong>Project Materials:</strong></p>
+            <ul>
+                <li>Feature Scenarios – BDD testing with Cucumber</li>
+                <li>Testing Suite – Jest unit tests & Puppeteer end-to-end tests</li>
+                <li>API Authorization – Google OAuth integration</li>
+                <li>Data Visualization – charts for event statistics</li>
+            </ul>
+            </div>
+
+          <div class="grid__item" data-category="frontend">
+            <h2>Simple JavaScript App</h2>
+
+            <p>
+                A beginner‑friendly project built with <strong>vanilla JavaScript</strong>. 
+                Demonstrates DOM manipulation, event handling, and API consumption by 
+                dynamically fetching and displaying data. Designed as an introduction to 
+                asynchronous JavaScript and interactive UI behavior. Deployed with GitHub Pages.
+            </p>
+
+            <a 
+                href="https://sagunanathani.github.io/simple-js-app/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+            >
+                🌐 Live App
+            </a>
+            |
+            <a 
+                href="https://github.com/sagunanathani/simple-js-app" 
+                target="_blank" 
+                rel="noopener noreferrer"
+            >
+                💻 GitHub Repo
+            </a>
+            <br />
+
+            <p>
+                <strong>Technologies Used:</strong> JavaScript, HTML, CSS, Fetch API, GitHub Pages
+            </p>
+
+            <p><strong>Project Materials:</strong></p>
+            <ul>
+                <li>API Integration – fetching and rendering external data</li>
+                <li>DOM Manipulation – dynamic UI updates</li>
+                <li>Event Handling – interactive user actions</li>
+                <li>Responsive Layout – optimized for small screens</li>
+            </ul>
+            </div>
+
+          <div class="grid__item" data-category="frontend">
+            <h2>jQuery To‑Do List App</h2>
+
+            <p>
+                A simple yet functional task management application built with 
+                <strong>jQuery</strong>. Users can add, complete, and remove tasks 
+                dynamically. Demonstrates DOM manipulation, event delegation, and 
+                interactive UI behavior. Deployed with GitHub Pages.
+            </p>
+
+            <a 
+                href="https://sagunanathani.github.io/jQuery-to-do-list-app/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+            >
+                🌐 Live App
+            </a>
+            |
+            <a 
+                href="https://github.com/sagunanathani/jQuery-to-do-list-app" 
+                target="_blank" 
+                rel="noopener noreferrer"
+            >
+                💻 GitHub Repo
+            </a>
+            <br />
+
+            <p>
+                <strong>Technologies Used:</strong> jQuery, JavaScript, HTML, CSS, GitHub Pages
+            </p>
+
+            <p><strong>Project Materials:</strong></p>
+            <ul>
+                <li>Task Management Logic – add, complete, delete tasks</li>
+                <li>jQuery DOM Methods – simplified UI updates</li>
+                <li>Event Delegation – efficient event handling</li>
+                <li>Minimalist UI – clean and easy to use</li>
+            </ul>
+            </div>
+
+          <div class="grid__item" data-category="mobile">
+            <h2>Chat App (React Native)</h2>
+
+            <p>
+                A modern cross‑platform chat application built with <strong>React Native 
+                (Expo)</strong> and <strong>Firebase</strong>. Allows users to join 
+                anonymously, send and receive real‑time messages, share photos (camera or 
+                gallery), and share live location. Includes offline support, accessibility 
+                features, and a clean mobile‑first UI.
+            </p>
+
+            <a 
+                href="https://youtube.com/shorts/oVr9hq4dXmw?feature=share" 
+                target="_blank" 
+                rel="noopener noreferrer"
+            >
+                🌐 Watch Demo Video
+            </a>
+            |
+            <a 
+                href="https://github.com/sagunanathani/ReactNativeChatApp" 
+                target="_blank" 
+                rel="noopener noreferrer"
+            >
+                💻 GitHub Repo
+            </a>
+            <br />
+
+            <p>
+                <strong>Technologies Used:</strong> React Native, Expo, Firebase Firestore, 
+                Firebase Storage, JavaScript
+            </p>
+
+            <p><strong>Project Materials:</strong></p>
+            <ul>
+                <li>Real‑Time Messaging – Firebase Firestore sync</li>
+                <li>Media Sharing – camera, gallery, and cloud storage</li>
+                <li>Location Sharing – integrated map support</li>
+                <li>Offline Mode – cached messages and assets</li>
+            </ul>
+            </div>
+
+        <div class="grid__item" data-category="frontend">
+            <h2>myFlix Angular Client (Angular)</h2>
+
+            <p>
+                A modern Angular single‑page application (SPA) that serves as the client‑side 
+                interface for the myFlix Movie API. Users can register, log in, browse 
+                movies, view directors and genres, and manage their list of favorite movies. 
+                Built with reusable components, Angular services, and modular architecture. 
+                Deployed with GitHub Pages.
+            </p>
+
+            <a 
+                href="https://sagunanathani.github.io/myFlix-Angular-client/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+            >
+                🌐 Live App
+            </a>
+            |
+            <a 
+                href="https://github.com/sagunanathani/myFlix-Angular-client" 
+                target="_blank" 
+                rel="noopener noreferrer"
+            >
+                💻 GitHub Repo
+            </a>
+            <br />
+
+            <p>
+                <strong>Technologies Used:</strong> Angular, TypeScript, SCSS, REST API, 
+                RxJS, GitHub Pages
+            </p>
+
+            <p><strong>Project Materials:</strong></p>
+            <ul>
+                <li><a href="assets/User flows.pdf" target="_blank">User Stories</a> – defined client roles and permissions</li>
+                <li><a href="https://trello.com/b/OBd2vLXg/angular-app-myflix" target="_blank">Kanban Board</a> – organized tasks by sprint</li>
+                <li><a href="assets/Agile_Environment.pdf" target="_blank">Agile Reflection</a> – documented sprint outcomes</li>
+            </ul>
+            </div>
+
+          <div class="grid__item" data-category="fullstack">
+            <h2>Python/Django Recipe Application</h2>
+
+            <p>
+                A full‑stack web application built with <strong>Python</strong> and 
+                <strong>Django</strong>. The project manages user data, generates backend 
+                analytics, and delivers dynamic content through Django templates and RESTful 
+                APIs. Includes secure authentication, modular architecture, and scalable 
+                design patterns. Deployed on Render.
+            </p>
+
+            <a 
+                href="https://django-recipe-app-6t2d.onrender.com" 
+                target="_blank" 
+                rel="noopener noreferrer"
+            >
+                🌐 Live App
+            </a>
+            |
+            <a 
+                href="https://github.com/sagunanathani/django-recipe-app" 
+                target="_blank" 
+                rel="noopener noreferrer"
+            >
+                💻 GitHub Repo
+            </a>
+            <br />
+
+            <p>
+                <strong>Technologies Used:</strong> Python, Django, HTML, CSS, JavaScript, 
+                REST API, PostgreSQL, GitHub Actions (CI/CD), Render
             </p>
 
             <p><strong>Planned Materials:</strong></p>
@@ -332,46 +373,60 @@
                 <li>Database Schema – modeling recipes, users, and authentication</li>
                 <li>API Endpoints – for recipe management and user interactions</li>
             </ul>
-          </div>
+            </div>
+
+          <div class="grid__item" data-category="fullstack">
+            <h2>Bookstore Django Application</h2>
+
+            <p>
+                A full‑stack web application built with <strong>Python</strong> and 
+                <strong>Django</strong>, designed to manage books, sales records, customers, 
+                and salespersons. Includes secure authentication, CRUD operations, and 
+                data visualization using Pandas and Matplotlib. Features a modular template 
+                system, responsive UI, and cloud‑based media storage. Deployed on Railway 
+                with PostgreSQL and Cloudinary.
+            </p>
+
+            <a 
+                href="https://bookstoredjango.up.railway.app" 
+                target="_blank" 
+                rel="noopener noreferrer"
+            >
+                🌐 Live App
+            </a>
+            |
+            <a 
+                href="https://github.com/sagunanathani/bookstore_django" 
+                target="_blank" 
+                rel="noopener noreferrer"
+            >
+                💻 GitHub Repo
+            </a>
+            <br />
+
+            <p>
+                <strong>Technologies Used:</strong> Python, Django, HTML, CSS, JavaScript, 
+                PostgreSQL, Cloudinary, Pandas, Matplotlib, Railway (Deployment), Whitenoise, 
+                Django Templates
+            </p>
+
+            <p><strong>Planned Materials:</strong></p>
+            <ul>
+                <li>Entity‑Relationship Diagram (Books, Sales, Customers, Salespersons)</li>
+                <li>User Flows – login, book management, sales tracking</li>
+                <li>Kanban Board – development workflow and task tracking</li>
+                <li>API Endpoints – for books, sales, and customer interactions</li>
+                <li>Deployment Architecture – Django + PostgreSQL + Cloudinary + Railway</li>
+            </ul>
+            </div>
         </div>
       </section>
     </main>
-
-    <footer class="page-footer">
-      <p>Find me on</p>
-      <div class="social-media">
-        <!-- img set with svg (set width,height,bg with text editor)-->
-        <a
-          href="https://x.com/SagunaNathani"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img src="./img/twitter_icon.svg" alt="Twitter" />
-        </a>
-        <a
-          href="https://github.com/sagunanathani"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img src="./img/github_icon.svg" alt="Github" />
-        </a>
-        <a
-          href="https://www.linkedin.com/in/saguna-nathani-23bba515b/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img src="./img/linkedin_icon.svg" alt="LinkedIn" />
-        </a>
-        <a
-          href="https://medium.com/@sagunanathani/build-a-real-time-chat-app-with-expo-firebase-and-gifted-chat-eaf2e2a4ed45"
-          target="_blank"
-          aria-label="Medium profile"
-          rel="noopener noreferrer"
-        >
-          <img src="./img/medium_icon.svg" alt="Medium" />
-        </a>
-      </div>
-    </footer>
+    
+    <div id="footer"></div>
+    <script src="js/include.js"></script>
     <script src="js/tota11y.min.js"></script>
+    <script src="js/work.js"></script>
+
   </body>
 </html>
