@@ -222,19 +222,32 @@
 }
 
 /* Project Card */
+.project-card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
 .project-card {
-  background: #f8faff;
-  padding: 1.8rem;
+  background: #fff;
+  min-height: 260px;
+  padding: 20px;
   border-radius: 12px;
-  text-align: left;
-  border: 1px solid #e6ecf5;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  cursor: pointer;
 }
 
 .project-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+.view-project {
+  display: inline-block;
+  margin-top: 12px;
+  font-weight: 600;
+  color: #0077ff;
 }
 
 /* Title */
@@ -328,8 +341,9 @@
 
 /* Hover Animation */
 .skills-list li:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  background-color: #f2f2f2;
+  /*/transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);*/
 }
 
 /* Responsive Tweaks */

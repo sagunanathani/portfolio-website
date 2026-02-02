@@ -298,6 +298,7 @@ a:hover {
 
 .skill-table tr:hover td {
   background: #f4f8ff;
+  cursor: default;
 }
 
 /* Mobile */
